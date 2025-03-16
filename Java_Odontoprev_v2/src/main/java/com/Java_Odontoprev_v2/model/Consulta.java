@@ -28,4 +28,5 @@ public class Consulta {
 
     @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
     private Cliente cliente;
+
 }

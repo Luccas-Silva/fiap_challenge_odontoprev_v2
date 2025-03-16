@@ -18,12 +18,12 @@ public class ClienteController {
     @Autowired
     private ClienteRepository clienteRepository;
 
-    @GetMapping
+    @GetMapping("/lista")
     public String listaCliente() {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/novo")
     public String novoCliente() {
         return "";
     }
@@ -33,12 +33,12 @@ public class ClienteController {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/editar")
     public String editarCliente() {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/deletar")
     public String deletarCliente() {
         return "";
     }

@@ -26,4 +26,5 @@ public class Cliente {
 
     @OneToMany(fetch = FetchType.LAZY)
     private List<Consulta> consultas;
+
 }

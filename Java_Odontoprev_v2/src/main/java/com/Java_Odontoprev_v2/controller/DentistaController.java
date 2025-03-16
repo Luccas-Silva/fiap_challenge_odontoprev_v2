@@ -19,12 +19,12 @@ public class DentistaController {
     @Autowired
     private DentistaRepository dentistaRepository;
 
-    @GetMapping
+    @GetMapping("/lista")
     public String listaDentista() {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/novo")
     public String novoDentista() {
         return "";
     }
@@ -34,12 +34,12 @@ public class DentistaController {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/editar")
     public String editarDentista() {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/deletar")
     public String deletarDentista() {
         return "";
     }

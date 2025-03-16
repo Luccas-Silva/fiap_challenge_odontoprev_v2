@@ -29,4 +29,5 @@ public class Dentista {
 
     @OneToMany(fetch = FetchType.LAZY)
     private List<Consulta> consultas;
+
 }

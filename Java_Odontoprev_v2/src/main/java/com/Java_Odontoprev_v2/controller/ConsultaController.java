@@ -19,12 +19,12 @@ public class ConsultaController {
     @Autowired
     private ConsultaRepository consultaRepository;
 
-    @GetMapping
+    @GetMapping("/lista")
     public String listaConsulta() {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/novo")
     public String novoConsulta() {
         return "";
     }
@@ -34,12 +34,12 @@ public class ConsultaController {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/editar")
     public String editarConsulta() {
         return "";
     }
 
-    @GetMapping
+    @GetMapping("/deletar")
     public String deletarConsulta() {
         return "";
     }
