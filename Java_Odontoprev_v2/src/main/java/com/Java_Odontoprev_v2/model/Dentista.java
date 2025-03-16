@@ -24,10 +24,10 @@ public class Dentista {
     private boolean alvaraFuncionamento;
     private String siteRedesSocial;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToOne(cascade = CascadeType.ALL)
     private Usuario usuario;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "dentista", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Consulta> consultas;
 
 }

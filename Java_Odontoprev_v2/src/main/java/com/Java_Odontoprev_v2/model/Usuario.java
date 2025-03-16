@@ -23,5 +23,5 @@ public class Usuario {
     private LocalDate dataNascimento;
     private String Email;
     private String Celular;
-    
+
 }

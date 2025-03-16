@@ -21,10 +21,10 @@ public class Cliente {
     private String cep;
     private String tipoPlano;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    @OneToOne(cascade = CascadeType.ALL)
     private Usuario usuario;
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "cliente", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<Consulta> consultas;
 
 }

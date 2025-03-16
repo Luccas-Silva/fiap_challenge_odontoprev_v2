@@ -23,10 +23,12 @@ public class Consulta {
     private String tipoConsulta;
     private Double valorMedioConsulta;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "dentista_cpf_cnpj")
     private Dentista dentista;
 
-    @OneToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    @ManyToOne(cascade = CascadeType.ALL) // Mudado para ManyToOne
+    @JoinColumn(name = "cliente_cpf_cnpj")
     private Cliente cliente;
 
 }
