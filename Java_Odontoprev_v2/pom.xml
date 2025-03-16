@@ -8,11 +8,11 @@
 		<version>3.4.3</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>Java_Odontoprev</artifactId>
+	<groupId>com</groupId>
+	<artifactId>Java_Odontoprev_v2</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Java_Odontoprev</name>
-	<description>project Odontoprev for Spring Boot</description>
+	<name>Java_Odontoprev_v2</name>
+	<description>Demo project for Spring Boot</description>
 	<url/>
 	<licenses>
 		<license/>
