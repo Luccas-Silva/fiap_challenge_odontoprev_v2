@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>OdontoPrev V2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1>Bem-vindo ao Sistema OdontoPrev V2</h1>
+    <hr/>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>Gerenciar Clientes</h2>
+            <ul>
+                <li><a th:href="@{/cliente/lista}">Listar Clientes</a></li>
+                <li><a th:href="@{/cliente/novo}">Cadastrar Novo Cliente</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h2>Gerenciar Dentistas</h2>
+            <ul>
+                <li><a th:href="@{/dentista/lista}">Listar Dentistas</a></li>
+                <li><a th:href="@{/dentista/novo}">Cadastrar Novo Dentista</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <h2>Gerenciar Consultas</h2>
+            <ul>
+                <li><a th:href="@{/consulta/lista}">Listar Consultas</a></li>
+                <li><a th:href="@{/consulta/novo}">Agendar Nova Consulta</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

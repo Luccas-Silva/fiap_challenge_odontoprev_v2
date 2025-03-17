@@ -4,6 +4,7 @@ import com.Java_Odontoprev_v2.model.Cliente;
 import com.Java_Odontoprev_v2.model.Consulta;
 import com.Java_Odontoprev_v2.repository.ClienteRepository;
 import com.Java_Odontoprev_v2.repository.ConsultaRepository;
+import com.Java_Odontoprev_v2.repository.DentistaRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -23,6 +24,10 @@ public class ConsultaController {
 
     @Autowired
     private ConsultaRepository consultaRepository;
+    @Autowired
+    private ClienteRepository clienteRepository;
+    @Autowired
+    private DentistaRepository dentistaRepository;
 
     @GetMapping("/lista")
     public String listaConsulta(Model model) {
@@ -34,8 +39,11 @@ public class ConsultaController {
     @GetMapping("/novo")
     public String novoConsulta(Model model) {
         model.addAttribute("consulta", new Consulta());
+        model.addAttribute("clientes", clienteRepository.findAll());
+        model.addAttribute("dentistas", dentistaRepository.findAll());
         return "consulta/novo";
     }
+
 
     @PostMapping("/salvar")
     public String salvarConsulta(@ModelAttribute Consulta consulta, BindingResult result, Model model) {

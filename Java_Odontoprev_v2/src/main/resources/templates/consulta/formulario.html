@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${consulta.idConsulta == null ? 'Agendar Nova Consulta' : 'Editar Consulta'}"></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+    <h1 th:text="${consulta.idConsulta == null ? 'Agendar Nova Consulta' : 'Editar Consulta'}"></h1>
+    <hr/>
+    <form th:action="@{/consulta/salvar}" th:object="${consulta}" method="post">
+        <div class="form-group">
+            <label for="dateConsulta">Data da Consulta</label>
+            <input type="date" class="form-control" id="dateConsulta" th:field="*{dateConsulta}">
+        </div>
+        <div class="form-group">
+            <label for="tipoConsulta">Tipo de Consulta</label>
+            <input type="text" class="form-control" id="tipoConsulta" th:field="*{tipoConsulta}">
+        </div>
+        <div class="form-group">
+            <label for="valorMedioConsulta">Valor Médio da Consulta</label>
+            <input type="number" step="0.01" class="form-control" id="valorMedioConsulta" th:field="*{valorMedioConsulta}">
+        </div>
+        <div class="form-group">
+            <label for="cliente">Cliente</label>
+            <select class="form-control" id="cliente" th:field="*{cliente}">
+                <option value="">Selecione um Cliente</option>
+                <option th:each="cliente : ${clientes}" th:value="${cliente}" th:text="${cliente.usuario.nome}"
+                        th:selected="${consulta.cliente != null && consulta.cliente.cpf_cnpj == cliente.cpf_cnpj}"></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="dentista">Dentista</label>
+            <select class="form-control" id="dentista" th:field="*{dentista}">
+                <option value="">Selecione um Dentista</option>
+                <option th:each="dentista : ${dentistas}" th:value="${dentista}" th:text="${dentista.usuario.nome}"
+                        th:selected="${consulta.dentista != null && consulta.dentista.cpf_cnpj == dentista.cpf_cnpj}"></option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar Consulta</button>
+        <a th:href="@{/consulta/lista}" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

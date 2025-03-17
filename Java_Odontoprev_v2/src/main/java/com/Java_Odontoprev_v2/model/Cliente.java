@@ -16,6 +16,7 @@ import java.util.List;
 public class Cliente {
 
     @Id
+    @Getter @Setter
     private String cpf_cnpj;
 
     private String cep;

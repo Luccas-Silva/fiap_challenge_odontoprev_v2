@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Novo Dentista</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Cadastrar Novo Dentista</h1>
+  <hr/>
+  <form th:action="@{/dentista/salvar}" th:object="${dentista}" method="post">
+    <div class="form-group">
+      <label for="cpfCnpj">CPF/CNPJ</label>
+      <input type="text" class="form-control" id="cpfCnpj" th:field="*{cpf_cnpj}">
+      <small class="form-text text-muted">Informe o CPF ou CNPJ do dentista.</small>
+    </div>
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" class="form-control" id="nome" th:field="*{usuario.nome}">
+    </div>
+    <div class="form-group">
+      <label for="dataNascimento">Data de Nascimento</label>
+      <input type="date" class="form-control" id="dataNascimento" th:field="*{usuario.dataNascimento}">
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" id="email" th:field="*{usuario.Email}">
+    </div>
+    <div class="form-group">
+      <label for="celular">Celular</label>
+      <input type="text" class="form-control" id="celular" th:field="*{usuario.Celular}">
+    </div>
+    <div class="form-group">
+      <label for="cepClinica">CEP da Clínica</label>
+      <input type="text" class="form-control" id="cepClinica" th:field="*{cepClinica}">
+    </div>
+    <div class="form-group">
+      <label for="nomeClinica">Nome da Clínica</label>
+      <input type="text" class="form-control" id="nomeClinica" th:field="*{nomeClinica}">
+    </div>
+    <div class="form-group">
+      <label for="tipoClinica">Tipo de Clínica</label>
+      <input type="text" class="form-control" id="tipoClinica" th:field="*{tipoClinica}">
+    </div>
+    <div class="form-group form-check">
+      <input type="checkbox" class="form-check-input" id="alvaraFuncionamento" th:field="*{alvaraFuncionamento}">
+      <label class="form-check-label" for="alvaraFuncionamento">Possui Alvará de Funcionamento</label>
+    </div>
+    <div class="form-group">
+      <label for="siteRedesSocial">Site/Redes Social</label>
+      <input type="text" class="form-control" id="siteRedesSocial" th:field="*{siteRedesSocial}">
+    </div>
+    <button type="submit" class="btn btn-primary">Salvar Dentista</button>
+    <a th:href="@{/dentista/lista}" class="btn btn-secondary">Cancelar</a>
+  </form>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

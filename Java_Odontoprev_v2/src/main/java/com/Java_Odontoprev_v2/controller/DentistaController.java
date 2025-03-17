@@ -29,7 +29,7 @@ public class DentistaController {
     public String listaDentista(Model model) {
         List<Dentista> dentistas = dentistaRepository.findAll();
         model.addAttribute("dentistas", dentistas);
-        return "dentistas/lista";
+        return "dentista/lista";
     }
 
     @GetMapping("/novo")

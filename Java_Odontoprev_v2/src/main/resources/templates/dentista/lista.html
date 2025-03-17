@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Dentistas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Lista de Dentistas</h1>
+  <hr/>
+  <a th:href="@{/dentista/novo}" class="btn btn-primary mb-3">Cadastrar Novo Dentista</a>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>CPF/CNPJ</th>
+      <th>Nome</th>
+      <th>Data de Nascimento</th>
+      <th>Email</th>
+      <th>Celular</th>
+      <th>CEP Clínica</th>
+      <th>Nome da Clínica</th>
+      <th>Tipo de Clínica</th>
+      <th>Alvará</th>
+      <th>Site/Redes Social</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="dentista : ${dentistas}">
+      <td th:text="${dentista.cpf_cnpj}"></td>
+      <td th:text="${dentista.usuario.nome}"></td>
+      <td th:text="${#dates.format(dentista.usuario.dataNascimento, 'dd/MM/yyyy')}"></td>
+      <td th:text="${dentista.usuario.Email}"></td>
+      <td th:text="${dentista.usuario.Celular}"></td>
+      <td th:text="${dentista.cepClinica}"></td>
+      <td th:text="${dentista.nomeClinica}"></td>
+      <td th:text="${dentista.tipoClinica}"></td>
+      <td th:text="${dentista.alvaraFuncionamento ? 'Sim' : 'Não'}"></td>
+      <td th:text="${dentista.siteRedesSocial}"></td>
+      <td>
+        <a th:href="@{/dentista/editar/{cpfCnpj}(cpfCnpj=${dentista.cpf_cnpj})}" class="btn btn-sm btn-info">Editar</a>
+        <a th:href="@{/dentista/editar/{cpfCnpj}(cpfCnpj=${dentista.cpf_cnpj})}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este dentista?')">Excluir</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

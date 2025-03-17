@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Consultas</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Lista de Consultas</h1>
+  <hr/>
+  <a th:href="@{/consulta/novo}" class="btn btn-primary mb-3">Agendar Nova Consulta</a>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Data</th>
+      <th>Tipo</th>
+      <th>Valor Médio</th>
+      <th>Cliente</th>
+      <th>Dentista</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="consulta : ${consultas}">
+      <td th:text="${consulta.idConsulta}"></td>
+      <td th:text="${#dates.format(consulta.dateConsulta, 'dd/MM/yyyy')}"></td>
+      <td th:text="${consulta.tipoConsulta}"></td>
+      <td th:text="${#numbers.formatCurrency(consulta.valorMedioConsulta)}"></td>
+      <td th:text="${consulta.cliente.usuario.nome}"></td>
+      <td th:text="${consulta.dentista.usuario.nome}"></td>
+      <td>
+        <a th:href="@{/consulta/editar/{id}(id=${consulta.idConsulta})}" class="btn btn-sm btn-info">Editar</a>
+        <a th:href="@{/consulta/deletar/{id}(id=${consulta.idConsulta})}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir esta consulta?')">Excluir</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

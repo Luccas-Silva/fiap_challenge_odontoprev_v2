@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista de Clientes</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mt-4">
+  <h1>Lista de Clientes</h1>
+  <hr/>
+  <a th:href="@{/cliente/novo}" class="btn btn-primary mb-3">Cadastrar Novo Cliente</a>
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>CPF/CNPJ</th>
+      <th>Nome</th>
+      <th>Data de Nascimento</th>
+      <th>Email</th>
+      <th>Celular</th>
+      <th>CEP</th>
+      <th>Tipo de Plano</th>
+      <th>Ações</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cliente : ${clientes}">
+      <td th:text="${cliente.cpf_cnpj}"></td>
+      <td th:text="${cliente.usuario.nome}"></td>
+      <td th:text="${#dates.format(cliente.usuario.dataNascimento, 'dd/MM/yyyy')}"></td>
+      <td th:text="${cliente.usuario.Email}"></td>
+      <td th:text="${cliente.usuario.Celular}"></td>
+      <td th:text="${cliente.cep}"></td>
+      <td th:text="${cliente.tipoPlano}"></td>
+      <td>
+        <a th:href="@{/cliente/editar/{cpfCnpj}(cpfCnpj=${cliente.cpf_cnpj})}" class="btn btn-sm btn-info">Editar</a>
+        <a th:href="@{/cliente/deletar/{cpfCnpj}(cpfCnpj=${cliente.cpf_cnpj})}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este cliente?')">Excluir</a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <a th:href="@{/}" class="btn btn-secondary">Voltar</a>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
