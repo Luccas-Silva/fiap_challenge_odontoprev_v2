@@ -48,9 +48,9 @@ public class DentistaController {
         return "redirect:/dentista/lista";
     }
 
-    @GetMapping("/editar/{cpfCnpj}/")
-    public String editarDentista(@PathVariable String cpfCnpj, Model model) {
-        Optional<Dentista> dentista = dentistaRepository.findById(cpfCnpj);
+    @GetMapping("/editar/{id}/")
+    public String editarDentista(@PathVariable String id, Model model) {
+        Optional<Dentista> dentista = dentistaRepository.findById(id);
         if (dentista.isPresent()){
             model.addAttribute("dentista", dentista.get());
             return "dentista/formulario";
@@ -58,9 +58,9 @@ public class DentistaController {
         return "dentista";
     }
 
-    @GetMapping("/editar/{cpfCnpj}")
-    public String deletarDentista(@PathVariable String cpfCnpj) {
-        dentistaRepository.deleteById(cpfCnpj);
+    @GetMapping("/editar/{id}")
+    public String deletarDentista(@PathVariable String id) {
+        dentistaRepository.deleteById(id);
         return "redirect:/dentista/lista";
     }
 

@@ -16,7 +16,8 @@ import java.util.List;
 public class Dentista {
 
     @Id
-    private String cpf_cnpj;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String idDentista;
 
     private String cepClinica;
     private String nomeClinica;

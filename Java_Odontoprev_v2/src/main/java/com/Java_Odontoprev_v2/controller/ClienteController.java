@@ -45,9 +45,9 @@ public class ClienteController {
         return "redirect:/cliente/lista";
     }
 
-    @GetMapping("/editar/{cpfCnpj}")
-    public String editarCliente(@PathVariable String cpfCnpj, Model model) {
-        Optional<Cliente> cliente = clienteRepository.findById(cpfCnpj);
+    @GetMapping("/editar/{id}")
+    public String editarCliente(@PathVariable String id, Model model) {
+        Optional<Cliente> cliente = clienteRepository.findById(id);
         if (cliente.isPresent()) {
             model.addAttribute("cliente", cliente.get());
             return "cliente/formulario";
@@ -55,9 +55,9 @@ public class ClienteController {
         return "cliente/novo";
     }
 
-    @GetMapping("/deletar/{cpfCnpj}")
-    public String deletarCliente(@PathVariable String cpfCnpj) {
-        clienteRepository.deleteById(cpfCnpj);
+    @GetMapping("/deletar/{id}")
+    public String deletarCliente(@PathVariable String id) {
+        clienteRepository.deleteById(id);
         return "redirect:/cliente/lista";
     }
 

@@ -19,6 +19,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.UUID)
     private String idUsuario;
 
+    private String cpf_cnpj;
     private String nome;
     private LocalDate dataNascimento;
     private String Email;

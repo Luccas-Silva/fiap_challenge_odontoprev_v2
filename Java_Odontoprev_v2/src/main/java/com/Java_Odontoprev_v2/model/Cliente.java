@@ -16,8 +16,8 @@ import java.util.List;
 public class Cliente {
 
     @Id
-    @Getter @Setter
-    private String cpf_cnpj;
+    @GeneratedValue(strategy = GenerationType.UUID)
+    private String idCliente;
 
     private String cep;
     private String tipoPlano;
