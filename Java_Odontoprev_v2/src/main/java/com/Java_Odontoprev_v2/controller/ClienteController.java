@@ -1,6 +1,7 @@
 package com.Java_Odontoprev_v2.controller;
 
 import com.Java_Odontoprev_v2.model.Cliente;
+import com.Java_Odontoprev_v2.model.Usuario;
 import com.Java_Odontoprev_v2.repository.ClienteRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,7 +32,9 @@ public class ClienteController {
 
     @GetMapping("/novo")
     public String novoCliente(Model model) {
-        model.addAttribute("cliente", new Cliente());
+        Cliente cliente = new Cliente();
+        cliente.setUsuario(new Usuario());
+        model.addAttribute("cliente", cliente);
         return "cliente/novo";
     }
 
