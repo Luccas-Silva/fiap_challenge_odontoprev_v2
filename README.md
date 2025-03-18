@@ -51,18 +51,18 @@ Após realizar as alterações, salve o arquivo e execute a aplicação. A aplic
 ### Cliente
 * **GET /cliente/lista**: Listar Clientes
 * **POST /cliente/novo:** Criar Cliente
-* **UPDADE /cliente/editar/{clienteId}**: Editar Cliente
+* **PUT /cliente/editar/{clienteId}**: Editar Cliente
 * **DELETE /cliente/deletar/{clienteId}**: Deletar Cliente
 
 
 ### Dentista
 * **GET /dentista/listas**: Listar Dentista
 * **POST /dentista/novo:** Criar Dentista
-* **UPDADE /dentista/editar/{dentistaId}**: Editar Dentista
+* **PUT /dentista/editar/{dentistaId}**: Editar Dentista
 * **DELETE /dentista/deletar/{dentistaId}**: Deletar Dentista
 
 ### Consulta
 * **GET /consulta/listas**: Listar Consulta
 * **POST /consulta/novo:** Criar Consulta
-* **UPDADE /consulta/editar/{consultaId}**: Editar Consulta
+* **PUT /consulta/editar/{consultaId}**: Editar Consulta
 * **DELETE /consulta/deletar/{consultaId}**: Deletar Consulta
