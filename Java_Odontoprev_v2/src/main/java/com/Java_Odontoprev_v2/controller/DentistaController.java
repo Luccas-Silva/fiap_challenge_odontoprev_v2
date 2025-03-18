@@ -3,6 +3,7 @@ package com.Java_Odontoprev_v2.controller;
 import com.Java_Odontoprev_v2.model.Cliente;
 import com.Java_Odontoprev_v2.model.Consulta;
 import com.Java_Odontoprev_v2.model.Dentista;
+import com.Java_Odontoprev_v2.model.Usuario;
 import com.Java_Odontoprev_v2.repository.ConsultaRepository;
 import com.Java_Odontoprev_v2.repository.DentistaRepository;
 import lombok.RequiredArgsConstructor;
@@ -34,6 +35,8 @@ public class DentistaController {
 
     @GetMapping("/novo")
     public String novoDentista(Model model) {
+        Dentista dentista = new Dentista();
+        dentista.setUsuario(new Usuario());
         model.addAttribute("dentista", new Dentista());
         return "dentista/novo";
     }
