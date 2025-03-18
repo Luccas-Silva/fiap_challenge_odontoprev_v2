@@ -27,7 +27,7 @@ public class Consulta {
     @JoinColumn(name = "dentista_cpf_cnpj")
     private Dentista dentista;
 
-    @ManyToOne(cascade = CascadeType.ALL) // Mudado para ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "cliente_cpf_cnpj")
     private Cliente cliente;
 
