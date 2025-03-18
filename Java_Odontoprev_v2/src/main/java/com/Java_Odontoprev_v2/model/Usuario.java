@@ -6,14 +6,8 @@ import lombok.*;
 import java.time.LocalDate;
 import java.util.Objects;
 
-@Data
-@Builder
+
 @Entity
-@NoArgsConstructor
-@AllArgsConstructor
-@Setter
-@Getter
-@ToString
 public class Usuario {
 
     @Id

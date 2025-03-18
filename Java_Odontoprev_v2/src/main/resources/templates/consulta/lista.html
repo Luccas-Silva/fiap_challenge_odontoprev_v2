@@ -27,7 +27,7 @@
       <td th:text="${consulta.idConsulta}"></td>
       <td th:text="${consulta.dateConsulta}"></td>
       <td th:text="${consulta.tipoConsulta}"></td>
-      <td th:text="${#numbers.formatCurrency(consulta.valorMedioConsulta)}"></td>
+      <td th:text="${consulta.valorMedioConsulta}"></td>
       <td th:text="${consulta.cliente.usuario.nome}"></td>
       <td th:text="${consulta.dentista.usuario.nome}"></td>
       <td>

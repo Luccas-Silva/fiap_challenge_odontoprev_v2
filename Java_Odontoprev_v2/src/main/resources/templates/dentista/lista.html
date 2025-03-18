@@ -39,8 +39,8 @@
       <td th:text="${dentista.alvaraFuncionamento ? 'Sim' : 'Não'}"></td>
       <td th:text="${dentista.siteRedesSocial}"></td>
       <td>
-        <a th:href="@{/dentista/editar/{cpfCnpj}(cpfCnpj=${dentista.cpf_cnpj})}" class="btn btn-sm btn-info">Editar</a>
-        <a th:href="@{/dentista/editar/{cpfCnpj}(cpfCnpj=${dentista.cpf_cnpj})}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este dentista?')">Excluir</a>
+        <a th:href="@{/cliente/editar/{id}(id=${dentista.idDentista})}" class="btn btn-sm btn-info">Editar</a>
+        <a th:href="@{/cliente/deletar/{id}(id=${dentista.idDentista})}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir este cliente?')">Excluir</a>
       </td>
     </tr>
     </tbody>
