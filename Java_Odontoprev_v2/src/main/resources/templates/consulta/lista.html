@@ -24,15 +24,24 @@
     </thead>
     <tbody>
     <tr th:each="consulta : ${consultas}">
-      <td th:text="${consulta.idConsulta}"></td>
-      <td th:text="${consulta.dateConsulta}"></td>
-      <td th:text="${consulta.tipoConsulta}"></td>
-      <td th:text="${consulta.valorMedioConsulta}"></td>
-      <td th:text="${consulta.cliente.usuario.nome}"></td>
-      <td th:text="${consulta.dentista.usuario.nome}"></td>
+      <td th:text="${consulta.idConsulta}">ID</td>
+      <td th:text="${#temporals.format(consulta.dateConsulta, 'dd/MM/yyyy')}">Data</td>
+      <td th:text="${consulta.tipoConsulta}">Tipo</td>
+      <td th:text="${#numbers.formatCurrency(consulta.valorMedioConsulta)}">Valor Médio</td>
+      <td>
+                <span th:if="${consulta.cliente != null and consulta.cliente.usuario != null}"
+                      th:text="${consulta.cliente.usuario.nome}">Nome do Cliente</span>
+        <span th:unless="${consulta.cliente != null and consulta.cliente.usuario != null}">Cliente não informado</span>
+      </td>
+      <td>
+                <span th:if="${consulta.dentista != null and consulta.dentista.usuario != null}"
+                      th:text="${consulta.dentista.usuario.nome}">Nome do Dentista</span>
+        <span th:unless="${consulta.dentista != null and consulta.dentista.usuario != null}">Dentista não informado</span>
+      </td>
       <td>
         <a th:href="@{/consulta/editar/{id}(id=${consulta.idConsulta})}" class="btn btn-sm btn-info">Editar</a>
-        <a th:href="@{/consulta/deletar/{id}(id=${consulta.idConsulta})}" class="btn btn-sm btn-danger" onclick="return confirm('Tem certeza que deseja excluir esta consulta?')">Excluir</a>
+        <a th:href="@{/consulta/deletar/{id}(id=${consulta.idConsulta})}" class="btn btn-sm btn-danger"
+           onclick="return confirm('Tem certeza que deseja excluir esta consulta?')">Excluir</a>
       </td>
     </tr>
     </tbody>

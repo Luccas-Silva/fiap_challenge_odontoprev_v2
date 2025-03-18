@@ -51,7 +51,7 @@ public class DentistaController {
         return "redirect:/dentista/lista";
     }
 
-    @GetMapping("/editar/{id}/")
+    @GetMapping("/editar/{id}")
     public String editarDentista(@PathVariable String id, Model model) {
         Optional<Dentista> dentista = dentistaRepository.findById(id);
         if (dentista.isPresent()){
@@ -61,7 +61,7 @@ public class DentistaController {
         return "dentista";
     }
 
-    @GetMapping("/editar/{id}")
+    @GetMapping("/deletar/{id}")
     public String deletarDentista(@PathVariable String id) {
         dentistaRepository.deleteById(id);
         return "redirect:/dentista/lista";
