@@ -27,16 +27,15 @@
             <label for="cliente">Cliente</label>
             <select class="form-control" id="cliente" th:field="*{cliente}">
                 <option value="">Selecione um Cliente</option>
-                <option th:each="cliente : ${clientes}" th:value="${cliente}" th:text="${cliente.usuario.nome}"
-                        th:selected="${consulta.cliente != null && consulta.cliente.cpf_cnpj == cliente.cpf_cnpj}"></option>
+                <option th:each="cliente : ${clientes}" th:value="${cliente.idCliente}" th:text="${cliente.usuario.nome}"></option>
             </select>
         </div>
+
         <div class="form-group">
             <label for="dentista">Dentista</label>
             <select class="form-control" id="dentista" th:field="*{dentista}">
                 <option value="">Selecione um Dentista</option>
-                <option th:each="dentista : ${dentistas}" th:value="${dentista}" th:text="${dentista.usuario.nome}"
-                        th:selected="${consulta.dentista != null && consulta.dentista.cpf_cnpj == dentista.cpf_cnpj}"></option>
+                <option th:each="dentista : ${dentistas}" th:value="${dentista.idDentista}" th:text="${dentista.usuario.nome}"></option>
             </select>
         </div>
         <button type="submit" class="btn btn-primary">Salvar Consulta</button>

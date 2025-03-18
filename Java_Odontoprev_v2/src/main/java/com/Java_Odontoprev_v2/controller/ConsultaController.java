@@ -44,13 +44,29 @@ public class ConsultaController {
         return "consulta/novo";
     }
 
-
     @PostMapping("/salvar")
     public String salvarConsulta(@ModelAttribute Consulta consulta, BindingResult result, Model model) {
         if (result.hasErrors()) {
             model.addAttribute("consulta", consulta);
+            model.addAttribute("clientes", clienteRepository.findAll());
+            model.addAttribute("dentistas", dentistaRepository.findAll());
             return "consulta/formulario";
         }
+
+        if (consulta.getCliente() != null && consulta.getCliente().getIdCliente() != null) {
+            clienteRepository.findById(consulta.getCliente().getIdCliente())
+                    .ifPresent(consulta::setCliente);
+        } else {
+            consulta.setCliente(null);
+        }
+
+        if (consulta.getDentista() != null && consulta.getDentista().getIdDentista() != null) {
+            dentistaRepository.findById(consulta.getDentista().getIdDentista())
+                    .ifPresent(consulta::setDentista);
+        } else {
+            consulta.setDentista(null);
+        }
+
         consultaRepository.save(consulta);
         return "redirect:/consulta/lista";
     }
