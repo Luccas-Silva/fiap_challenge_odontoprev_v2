@@ -25,7 +25,7 @@
     <tbody>
     <tr th:each="consulta : ${consultas}">
       <td th:text="${consulta.idConsulta}"></td>
-      <td th:text="${#dates.format(consulta.dateConsulta, 'dd/MM/yyyy')}"></td>
+      <td th:text="${consulta.dateConsulta}"></td>
       <td th:text="${consulta.tipoConsulta}"></td>
       <td th:text="${#numbers.formatCurrency(consulta.valorMedioConsulta)}"></td>
       <td th:text="${consulta.cliente.usuario.nome}"></td>

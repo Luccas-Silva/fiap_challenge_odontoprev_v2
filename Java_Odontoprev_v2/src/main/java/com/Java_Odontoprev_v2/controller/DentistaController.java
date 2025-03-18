@@ -37,7 +37,7 @@ public class DentistaController {
     public String novoDentista(Model model) {
         Dentista dentista = new Dentista();
         dentista.setUsuario(new Usuario());
-        model.addAttribute("dentista", new Dentista());
+        model.addAttribute("dentista", dentista);
         return "dentista/novo";
     }
 

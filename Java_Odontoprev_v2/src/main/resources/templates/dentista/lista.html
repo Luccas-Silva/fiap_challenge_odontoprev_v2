@@ -28,9 +28,9 @@
     </thead>
     <tbody>
     <tr th:each="dentista : ${dentistas}">
-      <td th:text="${dentista.cpf_cnpj}"></td>
+      <td th:text="${dentista.usuario.cpf_cnpj}"></td>
       <td th:text="${dentista.usuario.nome}"></td>
-      <td th:text="${#dates.format(dentista.usuario.dataNascimento, 'dd/MM/yyyy')}"></td>
+      <td th:text="${dentista.usuario.dataNascimento}"></td>
       <td th:text="${dentista.usuario.Email}"></td>
       <td th:text="${dentista.usuario.Celular}"></td>
       <td th:text="${dentista.cepClinica}"></td>
