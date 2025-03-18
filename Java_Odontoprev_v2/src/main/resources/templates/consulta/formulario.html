@@ -10,6 +10,7 @@
     <h1 th:text="${consulta.idConsulta == null ? 'Agendar Nova Consulta' : 'Editar Consulta'}"></h1>
     <hr/>
     <form th:action="@{/consulta/salvar}" th:object="${consulta}" method="post">
+        <input type="hidden" th:field="*{idConsulta}"/>
         <div class="form-group">
             <label for="dateConsulta">Data da Consulta</label>
             <input type="date" class="form-control" id="dateConsulta" th:field="*{dateConsulta}">
