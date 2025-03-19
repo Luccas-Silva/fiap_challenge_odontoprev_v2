@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\c#_challenge_v2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:c#_challenge_v2.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\presentation\\controllers\\dentistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:presentation\\controllers\\dentistacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\presentation\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:presentation\\controllers\\clientecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\presentation\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:presentation\\controllers\\consultacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "C#_Challenge_v2",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\C#_Challenge_v2.csproj",
+              "RelativeDocumentMoniker": "C#_Challenge_v2.csproj",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\C#_Challenge_v2.csproj*",
+              "RelativeToolTip": "C#_Challenge_v2.csproj*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-19T21:40:11.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DentistaController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Presentation\\Controllers\\DentistaController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\DentistaController.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Presentation\\Controllers\\DentistaController.cs*",
+              "RelativeToolTip": "Presentation\\Controllers\\DentistaController.cs*",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAqwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:32:05.605Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ConsultaController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Presentation\\Controllers\\ConsultaController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\ConsultaController.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Presentation\\Controllers\\ConsultaController.cs*",
+              "RelativeToolTip": "Presentation\\Controllers\\ConsultaController.cs*",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAiwA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:31:31.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ClienteController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Presentation\\Controllers\\ClienteController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\ClienteController.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Presentation\\Controllers\\ClienteController.cs*",
+              "RelativeToolTip": "Presentation\\Controllers\\ClienteController.cs*",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T21:30:41.983Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
