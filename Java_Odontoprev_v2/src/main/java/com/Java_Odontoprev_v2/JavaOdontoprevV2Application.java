@@ -32,7 +32,7 @@ public class JavaOdontoprevV2Application {
 			Random random = new Random();
 			LocalDate dataAtual = LocalDate.now();
 
-			for (int i = 0; i < 5; i++) { // Criando 5 clientes como exemplo
+			for (int i = 0; i < 5; i++) { // Criando 5 clientes
 				LocalDate dataNascimento = dataAtual.minusYears(18 + random.nextInt(60)); // Idades variadas
 
 				Cliente clienteCadastrado = Cliente.builder()
@@ -59,8 +59,8 @@ public class JavaOdontoprevV2Application {
 			Random random = new Random();
 			LocalDate dataAtual = LocalDate.now();
 
-			for (int i = 0; i < 3; i++) { // Criando 3 dentistas como exemplo
-				LocalDate dataNascimento = dataAtual.minusYears(25 + random.nextInt(45)); // Idades variadas para dentistas
+			for (int i = 0; i < 3; i++) { // Criando 3 dentistas
+				LocalDate dataNascimento = dataAtual.minusYears(25 + random.nextInt(45)); // Idades variadas
 
 				Dentista dentistaCadastrado = Dentista.builder()
 						.usuario(Usuario.builder()
