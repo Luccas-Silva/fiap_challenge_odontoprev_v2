@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Migrations\\20250320001815_intitdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250320001815_intitdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\entities\\clienteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\entities\\clienteentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\entities\\consultaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\entities\\consultaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\entities\\dentistaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\entities\\dentistaentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\entities\\usuarioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\entities\\usuarioentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Migrations\\20250320001634_intitdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20250320001634_intitdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\infrastructure\\data\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:infrastructure\\data\\repository\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\infrastructure\\data\\repository\\dentistarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:infrastructure\\data\\repository\\dentistarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\infrastructure\\data\\repository\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:infrastructure\\data\\repository\\clienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\interfaces\\iconsultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\interfaces\\iconsultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\interfaces\\identistarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\interfaces\\identistarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\interfaces\\iusuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\domain\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:domain\\interfaces\\iclienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\application\\interfaces\\iusuarioapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:application\\interfaces\\iusuarioapplicationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|c:\\users\\lucccas silva\\onedrive\\\u00E1rea de trabalho\\programas\\fiap_challenge_odontoprev_v2\\c#_challenge_v2\\infrastructure\\data\\repository\\consultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F08F7F7-ECBF-44B0-B34B-D270607F05B7}|C#_Challenge_v2.csproj|solutionrelative:infrastructure\\data\\repository\\consultarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,93 +58,132 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20250320001815_intitdb.cs",
-              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Migrations\\20250320001815_intitdb.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250320001815_intitdb.cs",
-              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Migrations\\20250320001815_intitdb.cs",
-              "RelativeToolTip": "Migrations\\20250320001815_intitdb.cs",
+              "DocumentIndex": 4,
+              "Title": "IConsultaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IConsultaRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IConsultaRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IConsultaRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IConsultaRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:18:16.195Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UsuarioEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\UsuarioEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\UsuarioEntity.cs",
-              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\UsuarioEntity.cs",
-              "RelativeToolTip": "Domain\\Entities\\UsuarioEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:17:34.617Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ConsultaEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\ConsultaEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\ConsultaEntity.cs",
-              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\ConsultaEntity.cs",
-              "RelativeToolTip": "Domain\\Entities\\ConsultaEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:17:27.777Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ClienteEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\ClienteEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\ClienteEntity.cs",
-              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\ClienteEntity.cs",
-              "RelativeToolTip": "Domain\\Entities\\ClienteEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:17:24.833Z",
+              "WhenOpened": "2025-03-20T02:25:12.426Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "20250320001634_intitdb.cs",
-              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Migrations\\20250320001634_intitdb.cs",
-              "RelativeDocumentMoniker": "Migrations\\20250320001634_intitdb.cs",
-              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Migrations\\20250320001634_intitdb.cs",
-              "RelativeToolTip": "Migrations\\20250320001634_intitdb.cs",
+              "Title": "IDentistaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IDentistaRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IDentistaRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IDentistaRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IDentistaRepository.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:16:35.211Z",
+              "WhenOpened": "2025-03-20T02:25:11.23Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IClienteRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IClienteRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IClienteRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IClienteRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:25:09.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IUsuarioApplicationService.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Application\\Interfaces\\IUsuarioApplicationService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\IUsuarioApplicationService.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Application\\Interfaces\\IUsuarioApplicationService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\IUsuarioApplicationService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:23:16.729Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\Repository\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\UsuarioRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\Repository\\UsuarioRepository.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAAwwCkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:21:59.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "DentistaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\DentistaRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\Repository\\DentistaRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\DentistaRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\Repository\\DentistaRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:21:26.253Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ConsultaRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\ConsultaRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\Repository\\ConsultaRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\ConsultaRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\Repository\\ConsultaRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:21:24.854Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "DentistaEntity.cs",
-              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\DentistaEntity.cs",
-              "RelativeDocumentMoniker": "Domain\\Entities\\DentistaEntity.cs",
-              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Entities\\DentistaEntity.cs",
-              "RelativeToolTip": "Domain\\Entities\\DentistaEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAQAAAA",
+              "Title": "ClienteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\ClienteRepository.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\Repository\\ClienteRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Infrastructure\\Data\\Repository\\ClienteRepository.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\Repository\\ClienteRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABIAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:15:32.708Z",
+              "WhenOpened": "2025-03-20T02:21:21.268Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IUsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeDocumentMoniker": "Domain\\Interfaces\\IUsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Domain\\Interfaces\\IUsuarioRepository.cs",
+              "RelativeToolTip": "Domain\\Interfaces\\IUsuarioRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAQAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-20T02:21:03.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\Lucccas Silva\\OneDrive\\\u00C1rea de Trabalho\\Programas\\fiap_challenge_odontoprev_v2\\C#_Challenge_v2\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAADJAAAA",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAwCcAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T00:11:19.313Z",
+              "WhenOpened": "2025-03-20T02:19:30.017Z",
               "EditorCaption": ""
             }
           ]
