@@ -33,9 +33,11 @@ namespace C__Challenge_v2.Application.Services
             var clienteEntity = await _clienteRepository.GetByCpfCnpjAsync(cpfCnpj);
             if (clienteEntity != null)
             {
-                await _clienteRepository.DeleteAsync(clienteEntity.Usuario.CpfCnpj);
+                await _clienteRepository.DeleteAsync(clienteEntity);
             }
         }
+
+
 
         public async Task<IEnumerable<ClienteDto>> GetAllAsync()
         {

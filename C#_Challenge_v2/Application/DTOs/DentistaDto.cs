@@ -32,5 +32,6 @@ namespace C__Challenge_v2.Application.DTOs
 
         public Guid UsuarioId { get; set; }
         public object CpfCnpj { get; internal set; }
+        public object Usuario { get; internal set; }
     }
 }

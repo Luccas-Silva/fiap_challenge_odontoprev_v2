@@ -9,5 +9,6 @@ namespace C__Challenge_v2.Domain.Interfaces
         Task AddAsync(UsuarioEntity consulta);
         Task UpdateAsync(UsuarioEntity consulta);
         Task DeleteAsync(Guid id);
+        Task DeleteAsync(string cpfCnpj);
     }
 }

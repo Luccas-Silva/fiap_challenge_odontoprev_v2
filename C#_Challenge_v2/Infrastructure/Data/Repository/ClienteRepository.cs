@@ -32,6 +32,12 @@ namespace C__Challenge_v2.Infrastructure.Data.Repository
             }
         }
 
+        public async Task DeleteAsync(ClienteEntity cliente)
+        {
+            _context.Cliente.Remove(cliente);
+            await _context.SaveChangesAsync();
+        }
+
         public async Task<IEnumerable<ClienteEntity>> GetAllAsync()
         {
             return await _context.Cliente.OrderBy(c => c.IdCliente).ToListAsync(); ;

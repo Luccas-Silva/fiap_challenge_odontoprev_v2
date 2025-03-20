@@ -9,6 +9,6 @@ namespace C__Challenge_v2.Domain.Interfaces
         Task AddAsync(ClienteEntity cliente);
         Task UpdateAsync(ClienteEntity cliente);
         Task DeleteAsync(string cpfCnpj);
-
+        Task DeleteAsync(ClienteEntity clienteEntity);
     }
 }

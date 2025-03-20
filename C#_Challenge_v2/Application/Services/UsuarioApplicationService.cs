@@ -33,6 +33,16 @@ namespace C__Challenge_v2.Application.Services
             await _usuarioRepository.DeleteAsync(id);
         }
 
+        public async Task DeleteAsync(string cpfCnpj)
+        {
+            await _usuarioRepository.DeleteAsync(cpfCnpj);
+        }
+
+        public Task DeleteAsync(object cpfCnpj)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task<IEnumerable<UsuarioDto>> GetAllAsync()
         {
             var usuarios = await _usuarioRepository.GetAllAsync();

@@ -10,6 +10,7 @@ namespace C__Challenge_v2.Application.Interfaces
         Task AddAsync(UsuarioDto usuarioDTO);
         Task UpdateAsync(UsuarioDto usuarioDTO);
         Task DeleteAsync(Guid id);
-        
+        Task DeleteAsync(string cpfCnpj);
+        Task DeleteAsync(object cpfCnpj);
     }
 }

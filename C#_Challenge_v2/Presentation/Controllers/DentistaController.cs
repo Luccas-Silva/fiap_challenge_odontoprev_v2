@@ -20,7 +20,7 @@ namespace C__Challenge_v2.Presentation.Controllers
         }
 
         [HttpGet]
-        [SwaggerOperation(Summary = "Obtém todos os dentistas", Description = "Retorna uma lista de dentistas.")]
+        [SwaggerOperation(Summary = "Obtém todos os dentistas", Description = "Retorna uma lista de todos os dentistas.")]
         [SwaggerResponse(200, "Dentistas encontrados com sucesso.", typeof(IEnumerable<DentistaDto>))]
         public async Task<IActionResult> Get()
         {
@@ -29,7 +29,7 @@ namespace C__Challenge_v2.Presentation.Controllers
         }
 
         [HttpGet("{cpfCnpj}")]
-        [SwaggerOperation(Summary = "Obtém um dentista pelo CPF/CNPJ", Description = "Retorna um dentista específico.")]
+        [SwaggerOperation(Summary = "Obtém um dentista por CPF/CNPJ", Description = "Retorna um dentista específico com base no CPF/CNPJ.")]
         [SwaggerResponse(200, "Dentista encontrado com sucesso.", typeof(DentistaDto))]
         [SwaggerResponse(404, "Dentista não encontrado.")]
         public async Task<IActionResult> GetByCpfCnpj(string cpfCnpj)
@@ -46,26 +46,39 @@ namespace C__Challenge_v2.Presentation.Controllers
         [SwaggerOperation(Summary = "Cria um novo dentista", Description = "Cria um novo dentista com os dados do usuário.")]
         [SwaggerResponse(201, "Dentista criado com sucesso.", typeof(DentistaDto))]
         [SwaggerResponse(400, "Requisição inválida.")]
-        public async Task<IActionResult> Create([FromBody] DentistaCreateDto dentistaCreateDto)
+        public async Task<IActionResult> Create([FromBody] DentistaCreateDto dentistaCreateDTO)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            await _usuarioApplicationService.AddAsync(dentistaCreateDto.Usuario);
-            dentistaCreateDto.Dentista.UsuarioId = dentistaCreateDto.Usuario.IdUsuario;
-            await _dentistaApplicationService.AddAsync(dentistaCreateDto.Dentista);
+            // Geração automática do IdUsuario
+            await _usuarioApplicationService.AddAsync(dentistaCreateDTO.Usuario);
 
-            return CreatedAtAction(nameof(GetByCpfCnpj), new { cpfCnpj = dentistaCreateDto.Dentista.CpfCnpj }, dentistaCreateDto.Dentista);
+            // Associa o IdUsuario gerado ao dentista
+            dentistaCreateDTO.Dentista.UsuarioId = dentistaCreateDTO.Usuario.IdUsuario;
+
+            await _dentistaApplicationService.AddAsync(dentistaCreateDTO.Dentista);
+
+            // Busca o dentista recém-criado pelo cpfCnpj do usuário
+            var dentistaCriado = await _dentistaApplicationService.GetByCpfCnpjAsync(dentistaCreateDTO.Usuario.CpfCnpj);
+
+            if (dentistaCriado == null)
+            {
+                return StatusCode(500, "Erro ao buscar dentista criado.");
+            }
+
+            // Retorna o DentistaDto completo
+            return CreatedAtAction(nameof(GetByCpfCnpj), new { cpfCnpj = dentistaCreateDTO.Usuario.CpfCnpj }, dentistaCriado);
         }
 
         [HttpPut("{cpfCnpj}")]
-        [SwaggerOperation(Summary = "Atualiza um dentista", Description = "Atualiza um dentista existente pelo CPF/CNPJ.")]
+        [SwaggerOperation(Summary = "Atualiza um dentista", Description = "Atualiza um dentista existente com base no CPF/CNPJ.")]
         [SwaggerResponse(204, "Dentista atualizado com sucesso.")]
         [SwaggerResponse(400, "Requisição inválida.")]
         [SwaggerResponse(404, "Dentista não encontrado.")]
-        public async Task<IActionResult> Update(string cpfCnpj, [FromBody] DentistaDto dentista)
+        public async Task<IActionResult> Update(string cpfCnpj, [FromBody] DentistaDto dentistaDto)
         {
             if (!ModelState.IsValid)
             {
@@ -78,9 +91,12 @@ namespace C__Challenge_v2.Presentation.Controllers
                 return NotFound();
             }
 
-            dentista.IdDentista = dentistaExistente.IdDentista;
+            dentistaDto.IdDentista = dentistaExistente.IdDentista;
 
-            await _dentistaApplicationService.UpdateAsync(dentista);
+            await _dentistaApplicationService.UpdateAsync(dentistaDto);
+
+            var usuario = await _usuarioApplicationService.GetByIdAsync(dentistaDto.UsuarioId);
+
             return NoContent();
         }
 
@@ -97,8 +113,10 @@ namespace C__Challenge_v2.Presentation.Controllers
             }
 
             await _dentistaApplicationService.DeleteAsync(cpfCnpj);
+
             return NoContent();
         }
 
     }
+
 }

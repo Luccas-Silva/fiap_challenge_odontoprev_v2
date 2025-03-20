@@ -30,6 +30,16 @@ namespace C__Challenge_v2.Infrastructure.Data.Repository
             }
         }
 
+        public async Task DeleteAsync(string cpfCnpj)
+        {
+            var usuario = await _context.Usuario.FirstOrDefaultAsync(u => u.CpfCnpj == cpfCnpj);
+            if (usuario != null)
+            {
+                _context.Usuario.Remove(usuario);
+                await _context.SaveChangesAsync();
+            }
+        }
+
         public async Task<IEnumerable<UsuarioEntity>> GetAllAsync()
         {
             return await _context.Usuario.ToListAsync();
@@ -47,3 +57,4 @@ namespace C__Challenge_v2.Infrastructure.Data.Repository
         }
     }
 }
+

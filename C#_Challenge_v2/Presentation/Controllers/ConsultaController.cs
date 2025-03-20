@@ -52,8 +52,16 @@ namespace C__Challenge_v2.Presentation.Controllers
                 return BadRequest(ModelState);
             }
 
-            await _consultaApplicationService.AddAsync(consultaDto);
-            return CreatedAtAction(nameof(GetById), new { id = consultaDto.IdConsulta }, consultaDto);
+            try
+            {
+                await _consultaApplicationService.AddAsync(consultaDto);
+                return CreatedAtAction(nameof(GetById), new { id = consultaDto.IdConsulta }, consultaDto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao criar consulta: {ex.Message}");
+                return StatusCode(500, "Erro interno do servidor.");
+            }
         }
 
         [HttpPut("{id}")]
@@ -76,8 +84,16 @@ namespace C__Challenge_v2.Presentation.Controllers
 
             consultaDto.IdConsulta = consultaExistente.IdConsulta;
 
-            await _consultaApplicationService.UpdateAsync(consultaDto);
-            return NoContent();
+            try
+            {
+                await _consultaApplicationService.UpdateAsync(consultaDto);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao atualizar consulta: {ex.Message}");
+                return StatusCode(500, "Erro interno do servidor.");
+            }
         }
 
         [HttpDelete("{id}")]
@@ -92,8 +108,16 @@ namespace C__Challenge_v2.Presentation.Controllers
                 return NotFound();
             }
 
-            await _consultaApplicationService.DeleteAsync(id);
-            return NoContent();
+            try
+            {
+                await _consultaApplicationService.DeleteAsync(id);
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Erro ao deletar consulta: {ex.Message}");
+                return StatusCode(500, "Erro interno do servidor.");
+            }
         }
 
     }

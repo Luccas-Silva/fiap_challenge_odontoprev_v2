@@ -91,6 +91,16 @@ namespace C__Challenge_v2.Presentation.Controllers
             cliente.IdCliente = clienteExistente.IdCliente;
 
             await _clienteApplicationService.UpdateAsync(cliente);
+
+            var usuario = await _usuarioApplicationService.GetByIdAsync(cliente.UsuarioId);
+            if (usuario != null)
+            {
+                usuario.Nome = cliente.Usuario.Nome;
+                usuario.Email = cliente.Usuario.Email;
+
+                await _usuarioApplicationService.UpdateAsync(usuario);
+            }
+
             return NoContent();
         }
 
@@ -106,7 +116,13 @@ namespace C__Challenge_v2.Presentation.Controllers
                 return NotFound();
             }
 
+            if (clienteExistente.Usuario != null)
+            {
+                await _usuarioApplicationService.DeleteAsync(clienteExistente.Usuario.IdUsuario);
+            }
+
             await _clienteApplicationService.DeleteAsync(cpfCnpj);
+
             return NoContent();
         }
     }
