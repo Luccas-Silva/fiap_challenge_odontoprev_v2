@@ -21,7 +21,7 @@ namespace C__Challenge_v2.Presentation.Controllers
         }
 
         [HttpGet]
-        [SwaggerOperation(Summary = "Obtém todos os clientes", Description = "Retorna uma lista de clientes.")]
+        [SwaggerOperation(Summary = "Obtém todos os clientes", Description = "Retorna uma lista de clientes com dados do usuário.")]
         [SwaggerResponse(200, "Clientes encontrados com sucesso.", typeof(IEnumerable<ClienteDto>))]
         public async Task<IActionResult> Get()
         {
@@ -30,7 +30,7 @@ namespace C__Challenge_v2.Presentation.Controllers
         }
 
         [HttpGet("{cpfCnpj}")]
-        [SwaggerOperation(Summary = "Obtém um cliente pelo CPF/CNPJ", Description = "Retorna um cliente específico.")]
+        [SwaggerOperation(Summary = "Obtém um cliente pelo CPF/CNPJ", Description = "Retorna um cliente específico com dados do usuário.")]
         [SwaggerResponse(200, "Cliente encontrado com sucesso.", typeof(ClienteDto))]
         [SwaggerResponse(404, "Cliente não encontrado.")]
         public async Task<IActionResult> GetByCpfCnpj(string cpfCnpj)
@@ -55,10 +55,19 @@ namespace C__Challenge_v2.Presentation.Controllers
             }
 
             await _usuarioApplicationService.AddAsync(clienteCreateDTO.Usuario);
+
             clienteCreateDTO.Cliente.UsuarioId = clienteCreateDTO.Usuario.IdUsuario;
+
             await _clienteApplicationService.AddAsync(clienteCreateDTO.Cliente);
 
-            return CreatedAtAction(nameof(GetByCpfCnpj), new { cpfCnpj = clienteCreateDTO.Cliente.CpfCnpj }, clienteCreateDTO.Cliente);
+            var clienteCriado = await _clienteApplicationService.GetByCpfCnpjAsync(clienteCreateDTO.Usuario.CpfCnpj);
+
+            if (clienteCriado == null)
+            {
+                return StatusCode(500, "Erro ao buscar cliente criado.");
+            }
+
+            return CreatedAtAction(nameof(GetByCpfCnpj), new { cpfCnpj = clienteCreateDTO.Usuario.CpfCnpj }, clienteCriado);
         }
 
         [HttpPut("{cpfCnpj}")]
@@ -100,6 +109,5 @@ namespace C__Challenge_v2.Presentation.Controllers
             await _clienteApplicationService.DeleteAsync(cpfCnpj);
             return NoContent();
         }
-
     }
 }

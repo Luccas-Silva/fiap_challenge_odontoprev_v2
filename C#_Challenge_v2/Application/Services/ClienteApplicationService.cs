@@ -9,10 +9,12 @@ namespace C__Challenge_v2.Application.Services
     {
 
         private readonly IClienteRepository _clienteRepository;
+        private readonly IUsuarioRepository _usuarioRepository;
 
-        public ClienteApplicationService(IClienteRepository clienteRepository)
+        public ClienteApplicationService(IClienteRepository clienteRepository, IUsuarioRepository usuarioRepository)
         {
             _clienteRepository = clienteRepository;
+            _usuarioRepository = usuarioRepository;
         }
 
         public async Task AddAsync(ClienteDto clienteDTO)
@@ -21,8 +23,7 @@ namespace C__Challenge_v2.Application.Services
             {
                 IdCliente = clienteDTO.IdCliente,
                 Cep = clienteDTO.Cep,
-                TipoPlano = clienteDTO.TipoPlano,
-                UsuarioId = clienteDTO.CpfCnpj
+                TipoPlano = clienteDTO.TipoPlano
             };
             await _clienteRepository.AddAsync(clienteEntity);
         }
@@ -39,13 +40,34 @@ namespace C__Challenge_v2.Application.Services
         public async Task<IEnumerable<ClienteDto>> GetAllAsync()
         {
             var clientes = await _clienteRepository.GetAllAsync();
-            return clientes.Select(cliente => new ClienteDto
+            var clienteDtos = new List<ClienteDto>();
+
+            foreach (var cliente in clientes)
             {
-                IdCliente = cliente.IdCliente,
-                Cep = cliente.Cep,
-                TipoPlano = cliente.TipoPlano,
-                CpfCnpj = cliente.UsuarioId
-            });
+                var usuario = await _usuarioRepository.GetByIdAsync(cliente.UsuarioId);
+                if (usuario != null)
+                {
+                    var clienteDto = new ClienteDto
+                    {
+                        IdCliente = cliente.IdCliente,
+                        Cep = cliente.Cep,
+                        TipoPlano = cliente.TipoPlano,
+                        UsuarioId = cliente.UsuarioId,
+                        Usuario = new UsuarioDto
+                        {
+                            IdUsuario = usuario.IdUsuario,
+                            CpfCnpj = usuario.CpfCnpj,
+                            Nome = usuario.Nome,
+                            DataNascimento = usuario.DataNascimento,
+                            Email = usuario.Email,
+                            Celular = usuario.Celular
+                        }
+                    };
+                    clienteDtos.Add(clienteDto);
+                }
+            }
+
+            return clienteDtos;
         }
 
         public async Task<ClienteDto> GetByCpfCnpjAsync(string cpfCnpj)
@@ -56,8 +78,7 @@ namespace C__Challenge_v2.Application.Services
             {
                 IdCliente = cliente.IdCliente,
                 Cep = cliente.Cep,
-                TipoPlano = cliente.TipoPlano,
-                CpfCnpj = cliente.UsuarioId
+                TipoPlano = cliente.TipoPlano
             };
         }
 
@@ -67,8 +88,7 @@ namespace C__Challenge_v2.Application.Services
             {
                 IdCliente = clienteDTO.IdCliente,
                 Cep = clienteDTO.Cep,
-                TipoPlano = clienteDTO.TipoPlano,
-                UsuarioId = clienteDTO.CpfCnpj
+                TipoPlano = clienteDTO.TipoPlano
             };
             await _clienteRepository.UpdateAsync(clienteEntity);
         }

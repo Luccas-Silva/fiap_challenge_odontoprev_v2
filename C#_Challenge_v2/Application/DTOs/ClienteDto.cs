@@ -17,8 +17,8 @@ namespace C__Challenge_v2.Application.DTOs
         [StringLength(50)]
         public string TipoPlano { get; set; }
 
-        public Guid CpfCnpj { get; set; }
-
         public Guid UsuarioId { get; set; }
+
+        public UsuarioDto Usuario { get; set; }
     }
 }
