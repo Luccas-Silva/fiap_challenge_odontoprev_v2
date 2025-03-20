@@ -1,33 +1,51 @@
 ﻿using C__Challenge_v2.Domain.Entities;
 using C__Challenge_v2.Domain.Interfaces;
+using C__Challenge_v2.Infrastructure.AppData;
+using Microsoft.EntityFrameworkCore;
 
 namespace C__Challenge_v2.Infrastructure.Data.Repository
 {
     public class DentistaRepository : IDentistaRepository
     {
-        public Task AddAsync(DentistaEntity dentista)
+
+        private readonly ApplicationContext _context;
+
+        public DentistaRepository(ApplicationContext context)
         {
-            throw new NotImplementedException();
+            _context = context;
         }
 
-        public Task DeleteAsync(string cpfCnpj)
+        public async Task AddAsync(DentistaEntity dentista)
         {
-            throw new NotImplementedException();
+            await _context.Dentista.AddAsync(dentista);
+            await _context.SaveChangesAsync();
         }
 
-        public Task<IEnumerable<DentistaEntity>> GetAllAsync()
+        public async Task DeleteAsync(string cpfCnpj)
         {
-            throw new NotImplementedException();
+            var dentista = await _context.Dentista.FirstOrDefaultAsync(d => d.Usuario.CpfCnpj == cpfCnpj);
+            if (dentista != null)
+            {
+                _context.Dentista.Remove(dentista);
+                await _context.SaveChangesAsync();
+            }
         }
 
-        public Task<DentistaEntity> GetByCpfCnpjAsync(string cpfCnpj)
+        public async Task<IEnumerable<DentistaEntity>> GetAllAsync()
         {
-            throw new NotImplementedException();
+            return await _context.Dentista.OrderBy(d => d.IdDentista).ToListAsync();
         }
 
-        public Task UpdateAsync(DentistaEntity dentista)
+        public async Task<DentistaEntity> GetByCpfCnpjAsync(string cpfCnpj)
         {
-            throw new NotImplementedException();
+            return await _context.Dentista.FirstOrDefaultAsync(d => d.Usuario.CpfCnpj == cpfCnpj);
         }
+
+        public async Task UpdateAsync(DentistaEntity dentista)
+        {
+            _context.Dentista.Update(dentista);
+            await _context.SaveChangesAsync(); ;
+        }
+
     }
 }

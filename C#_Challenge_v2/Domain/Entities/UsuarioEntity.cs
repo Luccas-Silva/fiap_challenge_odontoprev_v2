@@ -4,7 +4,7 @@ using System.ComponentModel;
 
 namespace C__Challenge_v2.Domain.Entities
 {
-    [Table("tb_Usuario")]
+    [Table("tbV2_Usuario")]
     public class UsuarioEntity
     {
         [Key]
