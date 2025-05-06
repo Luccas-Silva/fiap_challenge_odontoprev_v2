@@ -28,7 +28,6 @@ public class JavaOdontoprevV2Application {
 		MessagesConfiguration.setLocale(new Locale("pt", "BR"));
 
 		System.out.println(MessagesConfiguration.getMessage("greeting"));
-		System.out.println("Programa em execução...");
 
 		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
 			System.out.println(MessagesConfiguration.getMessage("farewell"));
