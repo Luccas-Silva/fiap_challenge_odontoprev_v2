@@ -1,5 +1,6 @@
 package com.Java_Odontoprev_v2;
 
+import com.Java_Odontoprev_v2.configs.MessagesConfiguration;
 import com.Java_Odontoprev_v2.model.Cliente;
 import com.Java_Odontoprev_v2.model.Dentista;
 import com.Java_Odontoprev_v2.model.Usuario;
@@ -16,12 +17,23 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDate;
 import java.util.Random;
+import java.util.Locale;
 
 @SpringBootApplication
 @RequiredArgsConstructor
 public class JavaOdontoprevV2Application {
 
 	public static void main(String[] args) {
+		// Configurar o idioma (alterar para "pt", "en" ou "es" conforme necessário)
+		MessagesConfiguration.setLocale(new Locale("pt", "BR"));
+
+		System.out.println(MessagesConfiguration.getMessage("greeting"));
+		System.out.println("Programa em execução...");
+
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+			System.out.println(MessagesConfiguration.getMessage("farewell"));
+		}));
+
 		SpringApplication.run(JavaOdontoprevV2Application.class, args);
 	}
 
